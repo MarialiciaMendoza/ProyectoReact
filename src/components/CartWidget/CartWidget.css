@@ -1,0 +1,14 @@
+.cartwidget__logo__container {
+    height: 50px;
+    width: auto;
+}
+
+.cartwidget__logo__img {
+    height: 100%;
+}
+
+.cartwidget__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
