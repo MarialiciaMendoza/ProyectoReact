@@ -6,9 +6,9 @@ const products = [
         stock: 100,
         descripcion: 'Descripcion de Servicio'
     },
-    { id: '2', name: 'Analisis Fisico-Quimico', price: 50, stock: 100, descripcion: 'Descripcion'},
-    { id: '3', name: 'Analisis Bromatológico', price: 40, stock: 100, descripcion: 'Descripcion'},
-    { id: '4', name: 'Asesoría y Asistencia Técnica', price: 100, stock: 100, descripcion: 'Descripcion'}
+    { id: '2', name: 'Analisis Fisico-Quimico', price: 50, stock: 100, descripcion: 'Descripcion de Servicio'},
+    { id: '3', name: 'Analisis Bromatológico', price: 40, stock: 100, descripcion: 'Descripcion de Servicio'},
+    { id: '4', name: 'Asesoría y Asistencia Técnica', price: 100, stock: 100, descripcion: 'Descripcion de Servicio'}
 ]
 
 export const getProducts = () => {
