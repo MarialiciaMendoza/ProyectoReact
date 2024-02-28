@@ -1,13 +1,13 @@
 
 
-const Nosotros = () => {
+const Servicios = () => {
     return(
         <div>
             <p>
-                Pagina nosotros
+                Pagina servicios
             </p>
         </div>
     )
 }
 
-export default Nosotros
+export default Servicios
