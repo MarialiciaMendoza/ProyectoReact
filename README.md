@@ -1,4 +1,4 @@
-# Tienda Coderhouse 
+# Proyecto Coderhouse 
 
 ## Versiones
   - v16.15.0 node
