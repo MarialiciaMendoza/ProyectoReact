@@ -8,7 +8,7 @@ import Servicios from './components/Pages/Servicios';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 
-import {CartProvider} from './context/CartContext';
+import {CartProvider} from './context/cartContext';
 
 function App() {
   return (

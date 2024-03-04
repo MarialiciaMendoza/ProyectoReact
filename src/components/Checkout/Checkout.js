@@ -85,6 +85,3 @@ const createOrder = async ({name, phone, email}) => {
     }
 
 export default Checkout
-
-
-

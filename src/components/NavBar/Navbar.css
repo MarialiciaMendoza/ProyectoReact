@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 10px 30px;
+    font-size: 2rem;
   }
   
   .navbar__button_container {
@@ -20,10 +21,6 @@
     padding: 10px;
   }
   
-  .Opcion:hover {
-    border-bottom: 2px solid #fff;
-  }
-  
   .ActiveOpcion {
     border-bottom: 2px solid #fff;
   }
@@ -32,3 +29,7 @@
     margin: '0 100px 0 100px';
   }
   
+  .logo {
+    height: 100px;
+    width: 100%;
+  }
