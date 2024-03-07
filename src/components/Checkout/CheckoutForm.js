@@ -1,4 +1,3 @@
-import './CheckoutForm.css'
 import {useState} from 'react'
 
 const CheckoutForm = ({onConfirm}) => {
