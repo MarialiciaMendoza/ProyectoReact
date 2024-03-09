@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { cartContext } from "../../context/CartContext";
 
-import {getDocs, collection, query, where, documentId, useState, writeBatch, addDoc, Timestap} from 'react';
-import {getFirestore} from "firebase/firestore";
+import {useState} from 'react';
+import { getDocs, collection, query, where, documentId, writeBatch, addDoc, Timestamp } from "firebase/firestore";
 
 import CheckoutForm from '../Checkout/CheckoutForm'
 
-const db = getFirestore()
+import { db } from "../..";
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false)
@@ -24,13 +24,15 @@ const createOrder = async ({name, phone, email}) => {
             },
             items: cart,
             total: total,
-            date: Timestap.fromDate(new Date ())
+            date: Timestamp.fromDate(new Date ())
         }
         const batch = writeBatch(db)
 
         const outOfStock =[]
 
-        const ids = cart.map(prod => prod.id)
+        const ids = cart.map(prod => prod.innerId)
+
+        console.log("IDS", ids)
 
         const productsRef = collection(db, 'products')
 

@@ -21,7 +21,7 @@ const CheckoutForm = ({onConfirm}) => {
                 <label className='Label'>
                     Nombre
                     <input
-                        classNAme='Input'
+                        className='Input'
                         type='text'
                         value={name}
                         onChange={({target}) => setName(target.value)}
@@ -30,7 +30,7 @@ const CheckoutForm = ({onConfirm}) => {
                 <label className='Label'>
                     Telefono
                     <input
-                        classNAme='Input'
+                        className='Input'
                         type='text'
                         value={phone}
                         onChange={({target}) => setPhone(target.value)}     
@@ -39,7 +39,7 @@ const CheckoutForm = ({onConfirm}) => {
                 <label className='Label'>
                     Email
                     <input
-                        classNAme='Input'
+                        className='Input'
                         type='text'
                         value={email}
                         onChange={({target}) => setEmail(target.value)}     

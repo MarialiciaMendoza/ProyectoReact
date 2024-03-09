@@ -5,9 +5,7 @@ import ItemList from '../ItemList/ItemList'
 import {useParams} from 'react-router-dom'
 
 import {getDocs, collection, query, where} from 'firebase/firestore'
-import {getFirestore} from 'firebase/firestore'
-
-const db = getFirestore()
+import { db } from '../..'
 
 const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
@@ -19,16 +17,20 @@ const ItemListContainer = ({greeting}) => {
         setLoading(true)
 
         const collectionRef = categoryId
-        ? query (collection(db, 'products'), where('category', '==', categoryId))
-        : collection (db, 'products')
+        ? query(collection(db, 'items'), where('category', '==', categoryId))
+        : collection(db, 'items')
+
+        console.log("COLLECTION", collectionRef)
 
         getDocs(collectionRef)
             .then(response => {
+                console.log("ReSPONSE:",response)
                 const productsAdapted = response.docs.map(doc => {
                     const data = doc.data()
                     return {id: doc.id, ...data}
                 })
-                setProducts (productsAdapted)
+                console.log("PRODUCTS", productsAdapted)
+                setProducts(productsAdapted)
             })
             .catch(error => {
                 console.log(error)
@@ -41,6 +43,9 @@ const ItemListContainer = ({greeting}) => {
     return(
         <div className="container__saludo">
             <h2>{greeting}</h2>
+            {loading && (
+                <p>Cargando servicios...</p>
+            )}
             <ItemList products = {products}/>
         </div>
     )
